@@ -8,7 +8,7 @@ description: >-
   "write the caption", "carousel", "story ideas", "comment on this", "reply to
   these comments", "DM this person", "plan my week", "fix my bio", "audit my
   content", "repurpose this video", "what's going viral", "humanize this",
-  "does this sound like AI", or "/insta <mode>".
+  "does this sound like AI", or "/insta reel", "/insta caption" and the other modes.
 ---
 
 # insta
