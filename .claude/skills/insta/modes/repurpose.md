@@ -1,14 +1,4 @@
----
-name: ig-repurpose
-description: >-
-  Turn one long asset - a YouTube video, podcast, livestream, newsletter, blog
-  post or client call - into a week of reels and carousels. Use when the user
-  says "repurpose this", "turn this into reels", "I have a video/podcast/
-  transcript", "cut this up", or pastes something long and wants it on
-  Instagram.
----
-
-# ig-repurpose
+# insta - repurpose mode
 
 One good long asset contains four to six posts. Most people extract one and
 throw the rest away.
@@ -54,7 +44,7 @@ Each extract becomes one post and each post stands completely on its own. The
 viewer has not seen the source and never will. Never write "as I said in my
 latest video". The post is the thing.
 
-Assign a hook formula from `ig-reel/hooks.json` to each and vary them. Five
+Assign a hook formula from `scripts/hooks.json` to each and vary them. Five
 posts from one source with the same hook shape reads as a content mill, because
 it is one.
 
@@ -83,6 +73,6 @@ SUN  REEL      #5  Time Collapse     Six hours a week back, one deleted link
 Say "write Tuesday" and I will draft it.
 ```
 
-Then draft on request, one at a time, each through `/ig-reel` and `/ig-human`.
+Then draft on request, one at a time, each through the `reel` mode (`modes/reel.md`) and the `human` mode (`modes/human.md`).
 Do not dump four finished scripts at once. They will all sound the same and the
 user will shoot none of them.

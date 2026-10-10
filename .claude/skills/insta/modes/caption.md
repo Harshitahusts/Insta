@@ -1,20 +1,10 @@
----
-name: ig-caption
-description: >-
-  Write the Instagram caption - the line that survives the "... more" cut, the
-  body, the single ask, the search terms and the three hashtags - and lint it
-  before it goes out. Use when the user says "write the caption", "caption this",
-  "what do I put in the description", has a reel or a carousel ready and needs
-  the text, or asks about hashtags.
----
+# insta - caption mode
 
-# ig-caption
-
-One tool lives in this folder and it runs:
+One tool lives in `scripts/` and it runs:
 
 ```bash
-python3 caption.py caption.txt
-python3 caption.py caption.txt --keywords "client proposals,agency pricing"
+python3 scripts/caption.py caption.txt
+python3 scripts/caption.py caption.txt --keywords "client proposals,agency pricing"
 ```
 
 It prints the caption the way the feed prints it: the first 125 characters in a
@@ -78,14 +68,14 @@ that reads normally. "Client proposals" as words in line three, not
 Ask for two or three of those terms, then pass them to the linter:
 
 ```bash
-python3 caption.py draft.txt --keywords "client proposals,agency pricing"
+python3 scripts/caption.py draft.txt --keywords "client proposals,agency pricing"
 ```
 
 ## Rules
 
 - **No link in the caption.** Captions are not clickable. A URL in the body is
   dead text that says "I do not use this platform". Bio or DM.
-- **One ask.** Two asks is the same as none. `caption.py` counts them.
+- **One ask.** Two asks is the same as none. `scripts/caption.py` counts them.
 - **The keyword ask needs a keyword people can type.** One word, no spaces, no
   emoji, and say it out loud in the video too. `Comment CONTRACT` works.
   `Comment "the contract guide"` does not.
@@ -100,9 +90,9 @@ python3 caption.py draft.txt --keywords "client proposals,agency pricing"
 
 1. Decide Job A or Job B and say which.
 2. Draft it.
-3. Run `/ig-human` on it. Captions are short, so slop is louder here than
+3. Run the `human` mode (`modes/human.md`) on it. Captions are short, so slop is louder here than
    anywhere else in the pack.
-4. Run `caption.py` with the user's search terms. Fix every FAIL. Decide on
+4. Run `scripts/caption.py` with the user's search terms. Fix every FAIL. Decide on
    every WARN out loud rather than silently.
 5. Print the copy-ready block, then the receipt:
 

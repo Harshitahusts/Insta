@@ -1,14 +1,4 @@
----
-name: ig-profile
-description: >-
-  Score an Instagram profile out of 100 against a 12-part rubric and rewrite
-  the parts that lose points - name field, bio, link, highlights, pinned three,
-  grid. Use when the user says "optimize my profile", "fix my bio", "score my
-  Instagram", "why don't people follow me", or pastes their profile and asks how
-  it reads.
----
-
-# ig-profile
+# insta - profile mode
 
 Almost everybody optimises the wrong thing here. The profile is not a
 storefront people browse. It is a **decision screen**, arrived at from one
@@ -26,7 +16,7 @@ Do not log into Instagram on their behalf.
 
 ## Score it
 
-Read `rubric.json` in this folder. Twelve items, 100 points, each with what
+Read `scripts/rubric.json`. Twelve items, 100 points, each with what
 full marks looks like and how it usually fails. Score every item, show the
 table, give the total. Be honest. Most profiles land in the 30s and 40s on the
 first pass and a generous score is useless.
@@ -74,7 +64,7 @@ readable in one glance.
 ## Output
 
 Score table, then the rewrites as copy-ready blocks in fix-first order, each
-run through `/ig-human`. Re-score at the end and show the delta honestly. If
+run through the `human` mode (`modes/human.md`). Re-score at the end and show the delta honestly. If
 the rewrite reaches 84 and not 98, say 84, and say what the rest needs, which
 is usually a grid, a story habit and a pinned post that does not exist yet.
 None of that is a rewrite.

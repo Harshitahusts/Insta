@@ -1,14 +1,4 @@
----
-name: ig-audit
-description: >-
-  Post-mortem on what the user has already posted - which reels actually
-  worked, why, and what to stop making. Use when the user pastes their
-  Instagram insights or past posts and asks "what's working", "why did this
-  flop", "read my analytics", "audit my content", or wants to know what to do
-  more of.
----
-
-# ig-audit
+# insta - audit mode
 
 The only honest source of what works for an account is that account. Every
 rule in every Instagram guide, including the ones in this pack, is a prior.
@@ -52,7 +42,7 @@ and be willing to conclude something the user will not like:
 
 - **Hold at 3 seconds.** If the top and bottom differ here, it is the hook and
   nothing else, and everything downstream is a distraction.
-- **Hook formula.** Which ids from `ig-reel/hooks.json` are in the top five?
+- **Hook formula.** Which ids from `scripts/hooks.json` are in the top five?
 - **Format.** Reel, carousel, single image.
 - **Length.** Group into under 15s, 15 to 30s, 30 to 60s, over 60s.
 - **Theme.**
@@ -69,7 +59,7 @@ better than inventing one.
 **A reel that gets views and no follows is not a failed reel, it is a profile
 problem.** A reel that gets no views is a hook problem. Separate the two before
 recommending anything. If non-follower reach is high and follows per reach is
-low, stop rewriting hooks and go to `/ig-profile`.
+low, stop rewriting hooks and go to the `profile` mode (`modes/profile.md`).
 
 ## Output
 
@@ -99,6 +89,6 @@ STOP: listicles.
 DO MORE: the ones with a cost you paid and a number attached.
 ```
 
-Then hand the conclusions to `/ig-plan` so next week is built on the user's own
-evidence rather than on defaults, and to `/ig-viral` so the swipe file gets
+Then hand the conclusions to the `plan` mode (`modes/plan.md`) so next week is built on the user's own
+evidence rather than on defaults, and to the `viral` mode (`modes/viral.md`) so the swipe file gets
 filtered to the formulas that work for this account specifically.

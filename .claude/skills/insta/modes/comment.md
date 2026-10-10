@@ -1,13 +1,4 @@
----
-name: ig-comment
-description: >-
-  Write comments on other people's Instagram posts and reels that read as a
-  person with an opinion, not a bot. Use when the user pastes a post or a reel
-  and wants a comment, says "comment on this", "engage with this", "what do I
-  say here", or wants a batch for their daily engagement round.
----
-
-# ig-comment
+# insta - comment mode
 
 Commenting is the highest-leverage twenty minutes on Instagram and the easiest
 to do badly. A comment near the top of a reel with 40,000 views is seen by more
@@ -61,7 +52,7 @@ Pick by what the post actually is. Never default to type 1.
 ## Output
 
 Give **two options of different types**, labelled, plus one line on which you
-would post and why. Run both through `/ig-human` first: comments are short, so
+would post and why. Run both through the `human` mode (`modes/human.md`) first: comments are short, so
 an em dash or a stock phrase is proportionally louder than it is in a caption.
 
 ```

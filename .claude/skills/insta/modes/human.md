@@ -1,23 +1,12 @@
----
-name: ig-human
-description: >-
-  Strip the machine fingerprint out of any draft - em dashes, AI slop words,
-  invisible watermark characters - and score it against a five-check detection
-  panel before it goes out. Use whenever text needs to sound human, when the
-  user says humanize, "does this sound like AI", "remove the em dashes",
-  "de-slop this", "this sounds like ChatGPT", or before any caption, script,
-  comment, reply or DM is shown to the user.
----
+# insta - human mode
 
-# ig-human
-
-Two tools live in this folder and they both actually run. Use them. Do not
+Two tools live in `scripts/` and they both actually run. Use them. Do not
 eyeball this.
 
 ```bash
-python3 humanize.py draft.txt --report        # clean it, show what changed
-python3 detect.py draft.txt                    # score it, five checks
-python3 detect.py before.txt after.txt         # prove the delta
+python3 scripts/humanize.py draft.txt --report        # clean it, show what changed
+python3 scripts/detect.py draft.txt                    # score it, five checks
+python3 scripts/detect.py before.txt after.txt         # prove the delta
 ```
 
 Both read `slop.json`: 154 stock words and phrases with plain-English
@@ -42,7 +31,7 @@ their own script.
 hyphens, byte-order marks, Unicode tag characters, invisible separators,
 non-breaking and narrow spaces. A keyboard does not produce these. They survive
 copy-paste, they are invisible in every editor, and they are the most
-mechanical thing in generated text. `humanize.py` deletes every one, including
+mechanical thing in generated text. `scripts/humanize.py` deletes every one, including
 any remaining Unicode format character it does not have a name for.
 
 **2. Typography.** Em dash to comma, en dash to hyphen, curly quotes to
@@ -71,12 +60,12 @@ a sentence needs judgement:
 - Reflex bait: "follow for more", "tag someone who", "double tap if"
 
 That list is your job. Rewrite each flagged line by hand, keeping the meaning,
-then re-run `detect.py`. This is the part that moves the score from REVIEW to
+then re-run `scripts/detect.py`. This is the part that moves the score from REVIEW to
 PASS, and it is the part a script cannot do.
 
 ## The five checks
 
-`detect.py` scores five signals 0-100, higher is more human:
+`scripts/detect.py` scores five signals 0-100, higher is more human:
 
 | check | what it measures | machine looks like |
 | --- | --- | --- |
